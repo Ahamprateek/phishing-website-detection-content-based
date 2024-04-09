@@ -69,15 +69,8 @@ I trained this model using Random Forest:
 
 ```bash
 Authors
-```
-```
-Rishabh: rbrishabh76@gmail.com
-```
-```
-Shivansh Srivastava: srivastavashiv0112@gmail.com
-```
-```
-Ashish Diwakar: ashishdiwakar223@gmail.com
+
+Prateek Dubey : dprateek127@gmail.com
 ```
 
 # phishing-website-detection-content-based
