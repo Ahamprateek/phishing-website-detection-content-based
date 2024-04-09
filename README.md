@@ -38,28 +38,28 @@ I trained this model using Random Forest:
 
 #### Selected features
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/features.png)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/features.png)
 
 #### Metrics of best model used:
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/metrics.png)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/metrics.png)
 
 #### Grid Search Cross-validation on Random Forest:
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/gscv.png)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/gscv.png)
 
 #### The ROC Curve for Random Forest:
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/plot.png)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/plot.png)
 
 ## Demo Video:
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/demo.gif)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/demo.gif)
 
 
 ### Data Input from user:
 
-![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/2.png)
+![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/2.png)
 
 ```bash
 Authors
