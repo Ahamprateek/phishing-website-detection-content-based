@@ -56,16 +56,10 @@ I trained this model using Random Forest:
 
 ![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/demo.gif)
 
-### Page of Website:
-
-![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/1.png)
-![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/why.png)
-![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/datareport.png)
-![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/about.png)
 
 ### Data Input from user:
 
-![Alt text](https://github.com/shiv0112/phising_domain_detector/raw/main/screenshots/2.png)
+![Alt text](https://github.com/ahamprateek/phising_domain_detector/raw/main/screenshots/2.png)
 
 ```bash
 Authors
