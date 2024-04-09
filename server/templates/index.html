@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Detector</title>
+
+    <!-- Fevicon -->
+    <link
+      rel="shortcut icon"
+      href="../static/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon" />
+
+    <!--Link for Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS and Bootstrap CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="../static/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="title navbar-brand" href="#">Domain Phishing</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">WHY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#report">Data Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Home section-->
+    <section id="home" class="home-section">
+      <div class="container">
+        <h1 class="landing-text">Hello Phish.</h1>
+        <form method="post" action="/predict" class="search-box">
+          <input
+            id="txt_1"
+            class="search"
+            type="url"
+            name="input"
+            placeholder="Enter the URL : https://www.example.com/"
+            required
+            onkeyup="saveValue(this);"
+          />
+          <input class="button" type="submit" value="Check" />
+        </form>
+        <p class="result">{{result}}</p>
+      </div>
+    </section>
+
+    <!--Why we are the best-->
+    <section id="features">
+      <div class="features-container">
+        <div class="features-intro">
+          <h2>Might be wondering WHY?</h2>
+          <p>Our insights will tell you why</p>
+        </div>
+        <div class="features-content">
+          <div class="content">
+            <p>
+              The Internet has become crucial to our daily lives, but it also
+              presents opportunities for malicious activities like Phishing,
+              which can be done anonymously. Phishers deceive their victims
+              through social engineering or fake websites in order to steal
+              important information like usernames and passwords from
+              individuals and organizations. While many techniques have been
+              suggested to identify phishing sites, phishers have adapted their
+              methods to avoid detection. However, Machine Learning has proven
+              to be an effective approach to identifying these harmful
+              activities. This is because most Phishing attacks share similar
+              characteristics, which can be recognized through machine learning
+              techniques.
+            </p>
+            <p>
+              Our team has developed a state-of-the-art solution utilizing
+              cutting-edge Machine Learning techniques, particularly the Random
+              Forest algorithm, which has demonstrated unparalleled accuracy in
+              detecting phishing attacks. Our solution has been rigorously
+              tested and has achieved an impressive accuracy rate of 98%.
+            </p>
+          </div>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide myeffects"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{{ url_for('static', filename='2.png') }}"
+                  class="d-block w-100"
+                  alt="The ROC Curve"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{{ url_for('static', filename='1.png') }}"
+                  class="d-block w-100"
+                  alt="The confusion matrix"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{{ url_for('static', filename='3.png') }}"
+                  class="d-block w-100"
+                  alt="classification Metrices"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Data Report-->
+    <section id="report">
+      <div class="report-container">
+        <div class="intro-report">
+          <h3>Dataset for phishing websites detection</h3>
+          <p>
+            Phishing stands for a fraudulent process, where an attacker tries to
+            obtain sensitive information from the victim. Usually, these kinds
+            of attacks are done via emails, text messages, or websites. Phishing
+            websites, which are nowadays in a considerable rise, have the same
+            look as legitimate sites. However, their backend is designed to
+            collect sensitive information that is inputted by the victim.
+            Discovering and detecting phishing websites has recently also gained
+            the machine learning community’s attention, which has built the
+            models and performed classifications of phishing websites. This
+            paper presents two dataset variations that consist of 58,645 and
+            88,647 websites labeled as legitimate or phishing and allow the
+            researchers to train their classification models, build phishing
+            detection systems, and mining association rules.
+          </p>
+          <p>
+            For data information
+            <a href="/data" target="_blank">Click here</a>
+          </p>
+          <!-- <p>
+            Click to know more about our data report
+            <a href="/report">Click here</a>
+          </p> -->
+        </div>
+      </div>
+    </section>
+
+    <!--About Us-->
+    <section id="contact">
+      <h1 class="intro-text">We're here for you</h1>
+      <div class="intro-component">
+        <h3>Ask how can we help you.</h3>
+        <p>
+          Connect to us with our socials and tell us the problem you are facing.
+        </p>
+      </div>
+      <div class="about-us">
+        <!--card component-->
+        <div class="card">
+          <div class="profile">
+            <img
+              class="profile-img"
+              src="https://media.licdn.com/dms/image/C4D03AQH7iQpKEl8mZw/profile-displayphoto-shrink_800_800/0/1647678826638?e=1682553600&v=beta&t=J6QknofZ7NmhirhdH8iPumaAdVasASRrg7E2LDUC1mU"
+              alt="profile photo"
+            />
+          </div>
+          <div class="intro">
+            <h3>Ashish Diwakar</h3>
+            <p>Full stack web developer</p>
+            <p>ashishdiwakar223@gmail.com</p>
+            <a href="https://www.linkedin.com/in/ashish-diwakar/"
+              ><img class="social" src="../static/linkedin.png" alt="linkedin"
+            /></a>
+            <a href="https://github.com/Ashish-source23"
+              ><img class="social" src="../static/github.png" alt="github"
+            /></a>
+          </div>
+        </div>
+        <!-- <div class="line-div"></div> -->
+        <!--card component-->
+        <div class="card">
+          <div class="profile">
+            <img
+              class="profile-img"
+              src="https://media.licdn.com/dms/image/C4D03AQF0BTgQgDYyvQ/profile-displayphoto-shrink_400_400/0/1656774203006?e=1682553600&v=beta&t=ypKu21Lt-40WTBr_eZL8WuTv3jFBzkocr6X9DwtV2eY"
+              alt="profile photo"
+            />
+          </div>
+          <div class="intro">
+            <h3>Shivansh Srivastava</h3>
+            <p>Data Scientist</p>
+            <p>srivastavashiv0112@gmail.com</p>
+            <a href="https://www.linkedin.com/in/srivastava-shivansh/"
+              ><img class="social" src="../static/linkedin.png" alt="linkedin"
+            /></a>
+            <a href="https://github.com/shiv0112"
+              ><img class="social" src="../static/github.png" alt="github"
+            /></a>
+          </div>
+        </div>
+        <!-- <div class="line-div"></div> -->
+        <!--card component-->
+        <div class="card">
+          <div class="profile">
+            <img
+              class="profile-img"
+              src="https://avatars.githubusercontent.com/u/74089340?v=4"
+              alt="profile photo"
+            />
+          </div>
+          <div class="intro">
+            <h3>Rishabh .</h3>
+            <p>Data Scientist</p>
+            <p>rbrishabh76@gmail.com</p>
+            <a href="https://www.linkedin.com/in/rishabh-465a85185/"
+              ><img class="social" src="../static/linkedin.png" alt="linkedin"
+            /></a>
+            <a href="https://github.com/Rishbah-76"
+              ><img class="social" src="../static/github.png" alt="github"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      document.getElementById("txt_1").value = getSavedValue("txt_1"); // set the value to this input
+      /* Here you can add more inputs to set value. if it's saved */
+
+      //Save the value function - save it to localStorage as (ID, VALUE)
+      function saveValue(e) {
+        var id = e.id; // get the sender's id to save it .
+        var val = e.value; // get the value.
+        localStorage.setItem(id, val); // Every time user writing something, the localStorage's value will override .
+      }
+
+      //get the saved value function - return the value of "v" from localStorage.
+      function getSavedValue(v) {
+        if (!localStorage.getItem(v)) {
+          return ""; // You can change this to your defualt value.
+        }
+        return localStorage.getItem(v);
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
